@@ -13,10 +13,6 @@ test('renders learn react link', () => {
 
 test('get all todo data', async () => {
   const todos = await todoData.getAllTodosData();
-  const b = null;
-  console.log(b)
-  console.log('bがnullかどうか')
   console.log(todos.length)
-  expect(b).toBeNull()
   expect(todos).toHaveLength(3)
 });
