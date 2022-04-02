@@ -1,6 +1,6 @@
 import axios from "axios";
 // const todoDataUrl = "http://localhost:3100/todos";
-const todoDataUrl = "https://test-segawa-json.herokuapp.com/todos";
+const todoDataUrl = process.env.REACT_APP_JSON_SERVER_ENDPOINT + "/todos";
 export const getAllTodosData = async () => {
   const response = await axios.get(todoDataUrl);
   return response.data;
