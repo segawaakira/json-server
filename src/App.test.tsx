@@ -11,8 +11,24 @@ test('renders learn react link', () => {
   expect(a).toBeNull()
 });
 
-test('get all todo data', async () => {
-  const todos = await todoData.getAllTodosData();
+// test('get all todo data', async () => {
+//   const todos = await todoData.getAllTodosData();
+//   console.log(todos.length)
+//   expect(todos).toHaveLength(3)
+// });
+
+test('paddt todo data', async () => {
+  // TODO:本当に叩かずに、モックで確認したい。
+  const addData = {
+    content: 'テストのTODO',
+    id: 'testId',
+    done: false
+  };
+  const todos = await todoData.addTodoData(addData);
   console.log(todos.length)
-  expect(todos).toHaveLength(3)
+  const a = null;
+  console.log(todos)
+  console.log('aがnullかどうか')
+  expect(a).toBeNull()
+  // expect(todos).toHaveLength(3)
 });

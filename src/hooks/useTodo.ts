@@ -24,7 +24,7 @@ export const useTodo = () => {
       setTodoList(newTodoList);
     });
   };
-  const addTodoListItem = (todoContent: any) => {
+  const addTodoListItem = (todoContent: string) => {
     const newTodoItem = {
       content: todoContent,
       id: ulid(),
